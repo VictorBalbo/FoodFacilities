@@ -60,13 +60,13 @@ Open the solution `FoodFacilities.sln`, set the project `FoodFacilities.API` as 
 The API swagger will automatically open on your default browser.
 
 ## What this API do
-This API fetches data about [Mobile Food Facilities in San Francisco](https://datasf.org) and perform custom filters to it.
+This API fetches data about [Mobile Food Facilities in San Francisco](https://datasf.org) and perform custom filters to it. The data is fetched on the first request and stored in a memory cache for 05 minutes.
+
 The Endpoints present in this API are documented through `Swagger`.
-The API uses `HTTP` protocol for communication and the responses are formatted in `JSON`.
 
 # Architectural Decisions
 ## Entity Framework
-As this API consumes the data from an external source, it is susceptible to external errors from its providers. Because of this is always a good idea to have a copy or a cache of the data.
+As this API consumes the data from an external source, it is susceptible to external errors from its providers. Because of this, it is always a good idea to have a copy or a cache of the data.
 With that in mind, I used the [Entity Framework](https://learn.microsoft.com/pt-br/ef/) to cache the data in a memory storage. Although there are other simpler cache mechanism, the idea of using Entity Framework is that the storage could be quickly be moved to a real database if the data doesn't change very often.
 Entity Framework is reliable enough to be used in any project, as it maintained by Microsoft and a huge community. 
 
@@ -84,7 +84,11 @@ The Provider will be responsible to fetch data from an external source and treat
 # Critique
 ## What could be added
 ### Log and Metrics System
+For a production grade application it would be a good idea to have a monitoring system that can show how the application is performing and present the logs from the application. One option for this is `Grafana` that has a complete stack with metric dashboards, traces and logs.
 
 ## What could be improved
 ### More precise distance calculation
+In this project I'm using a method of calculating the distance between two points that is based on a cartesian plane, witch means that elevation and earths curvature is not considered. For an application that will be used for the context of a city, this is not a big problem as the earth's curvature won't affect to much in the calculations. But for an application that would work in the context of a bigger area, it would be a good idea to change the calculation for considering the curvature of earth and the ground elevation.   
 ### Cache Mechanism
+For an application that constantly requires data from an external provider is always a good idea to have some kind of cache mechanism, so a problem on the external source doesn't stop our application. In the context of this project, I used Entity Framework with an In Memory cache for the data, but other options could be considered depending on the kind and external provider.
+Other cache options are using a simpler memory cache from .net (removing the need for `Entity Framework`); or if the application needs to be horizontally scaled (running multiple instances) is it possible to use an external cache database, like a `Redis` Cache.  
