@@ -32,7 +32,6 @@ public class Permit
 
     public string? Y { get; set; }
 
-
     [JsonNumberHandling(JsonNumberHandling.AllowReadingFromString)]
     public double Latitude { get; set; }
 

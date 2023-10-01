@@ -38,6 +38,4 @@ public interface IRepository<TEntity> where TEntity : class
     /// <param name="cancellationToken"></param>
     /// <returns></returns>
     public Task CommitAsync(CancellationToken cancellationToken);
-
-
 }

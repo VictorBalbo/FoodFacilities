@@ -18,7 +18,6 @@ public class PermitManagerTests
     private IPermitManager _permitManager;
     private CancellationToken _cancellationToken;
 
-
     [TestInitialize]
     public void InitializeTest()
     {
