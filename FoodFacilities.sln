@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodFacilities.API", "src\FoodFacilities.API\FoodFacilities.API.csproj", "{7F909E1B-A972-443F-8BE1-413DDA8FAFF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodFacilities.Data", "src\FoodFacilities.Data\FoodFacilities.Data.csproj", "{1CAC8E2D-DFED-4BBC-A5E5-56A4E96E52B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodFacilities.Models", "src\FoodFacilities.Models\FoodFacilities.Models.csproj", "{6304EFFD-05DD-4288-B93F-58B8D023892E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodFacilities.API.Tests", "tests\FoodFacilities.API.Tests\FoodFacilities.API.Tests.csproj", "{20CEA0E5-37BD-43C2-B3B4-2E5FD1BFFA2A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{0052CFA4-D1DF-4885-BED5-941832E70AFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodFacilities.Data.Tests", "tests\FoodFacilities.Data.Tests\FoodFacilities.Data.Tests.csproj", "{94AB5E46-E637-45E8-914E-8F66508A4EFE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F909E1B-A972-443F-8BE1-413DDA8FAFF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F909E1B-A972-443F-8BE1-413DDA8FAFF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F909E1B-A972-443F-8BE1-413DDA8FAFF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F909E1B-A972-443F-8BE1-413DDA8FAFF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CAC8E2D-DFED-4BBC-A5E5-56A4E96E52B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CAC8E2D-DFED-4BBC-A5E5-56A4E96E52B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CAC8E2D-DFED-4BBC-A5E5-56A4E96E52B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CAC8E2D-DFED-4BBC-A5E5-56A4E96E52B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6304EFFD-05DD-4288-B93F-58B8D023892E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6304EFFD-05DD-4288-B93F-58B8D023892E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6304EFFD-05DD-4288-B93F-58B8D023892E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6304EFFD-05DD-4288-B93F-58B8D023892E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20CEA0E5-37BD-43C2-B3B4-2E5FD1BFFA2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20CEA0E5-37BD-43C2-B3B4-2E5FD1BFFA2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20CEA0E5-37BD-43C2-B3B4-2E5FD1BFFA2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20CEA0E5-37BD-43C2-B3B4-2E5FD1BFFA2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94AB5E46-E637-45E8-914E-8F66508A4EFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94AB5E46-E637-45E8-914E-8F66508A4EFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94AB5E46-E637-45E8-914E-8F66508A4EFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94AB5E46-E637-45E8-914E-8F66508A4EFE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{20CEA0E5-37BD-43C2-B3B4-2E5FD1BFFA2A} = {0052CFA4-D1DF-4885-BED5-941832E70AFF}
+		{94AB5E46-E637-45E8-914E-8F66508A4EFE} = {0052CFA4-D1DF-4885-BED5-941832E70AFF}
+	EndGlobalSection
+EndGlobal
