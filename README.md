@@ -10,7 +10,7 @@
 - [Critique](#critique)
 
 # Food Facilities Challenge
-This project is part of RadAi Software Engineer assignment.
+This project is part of RadAi Software Engineer assignment. The challenge is to create an API that performs operations and filters to the data set given.
 
 You can access the deployed project on https://foodfacilities.azurewebsites.net/ hosted by Azure.
 
@@ -64,6 +64,9 @@ This API fetches data about [Mobile Food Facilities in San Francisco](https://da
 
 The Endpoints present in this API are documented through `Swagger`.
 
+## Time spent
+This projects was create in approximately 7 hours.
+
 # Architectural Decisions
 ## Entity Framework
 As this API consumes the data from an external source, it is susceptible to external errors from its providers. Because of this, it is always a good idea to have a copy or a cache of the data.
@@ -91,4 +94,4 @@ For a production grade application it would be a good idea to have a monitoring 
 In this project I'm using a method of calculating the distance between two points that is based on a cartesian plane, witch means that elevation and earths curvature is not considered. For an application that will be used for the context of a city, this is not a big problem as the earth's curvature won't affect to much in the calculations. But for an application that would work in the context of a bigger area, it would be a good idea to change the calculation for considering the curvature of earth and the ground elevation.   
 ### Cache Mechanism
 For an application that constantly requires data from an external provider is always a good idea to have some kind of cache mechanism, so a problem on the external source doesn't stop our application. In the context of this project, I used Entity Framework with an In Memory cache for the data, but other options could be considered depending on the kind and external provider.
-Other cache options are using a simpler memory cache from .net (removing the need for `Entity Framework`); or if the application needs to be horizontally scaled (running multiple instances) is it possible to use an external cache database, like a `Redis` Cache.  
+Other cache options are using a simpler memory cache from .net (removing the need for `Entity Framework`); or if the application needs to be horizontally scaled (running multiple instances) is it possible to use an external cache database, like a `Redis` Cache.
