@@ -6,6 +6,8 @@
     - [Docker](#docker)
     - [.NET CLI](#net-cli)
     - [IDE](#ide)
+  - [What this API do](#what-this-api-do)
+  - [Time spent](#time-spent)
 - [Architectural Decisions](#architectural-decisions)
 - [Critique](#critique)
 
